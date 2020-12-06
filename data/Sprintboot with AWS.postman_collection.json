@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "9ddf9cbf-3f3e-4133-a442-7b5b4b19c873",
+		"name": "Sprintboot with AWS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "S3",
+			"item": [
+				{
+					"name": "List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/paulo-ricardo/Downloads/minha-foto.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/v1/s3",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"v1",
+								"s3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/paulo-ricardo/Downloads/minha-foto.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/v1/s3/download/:filename",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"v1",
+								"s3",
+								"download",
+								":filename"
+							],
+							"variable": [
+								{
+									"key": "filename",
+									"value": "06122020193821-Springboot-with-AWS.png"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/paulo-ricardo/Downloads/minha-foto.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/v1/s3/upload",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"v1",
+								"s3",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/paulo-ricardo/Downloads/minha-foto.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/v1/s3/delete/:filename",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"v1",
+								"s3",
+								"delete",
+								":filename"
+							],
+							"variable": [
+								{
+									"key": "filename",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "988f15f7-514c-451c-b7ca-06886ec9d2ec",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "87caf44c-7826-47bd-b427-c2b1f5914252",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

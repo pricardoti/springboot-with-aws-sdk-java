@@ -1,0 +1,5 @@
+aws:
+  s3:
+    bucketName: # '<< Your bucketName s3>>'
+    accessKey:  # '<< Your accessKey s3>>'
+    secretKey:  # '<< Your secretKey s3>>'
